@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIG Property Management - Operational Excellence</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Shared Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+        :root {
+            --primary-navy: #0A192F;
+            --accent-blue: #4A6FA5; /* Focus Color for Mgmt */
+            --light-blue: #e8f0fe;
+            --text-dark: #333333;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--text-dark); background-color: #f8f9fa; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+
+        /* Navigation */
+        nav {
+            background: var(--primary-navy);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo { color: var(--white); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+        .back-link { color: var(--accent-blue); text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Hero Section - Business Focused */
+        .mgmt-hero {
+            height: 60vh;
+            /* Background Image: Modern Office/Management Building */
+            background: linear-gradient(to right, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.4)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            color: var(--white);
+        }
+        .hero-content { max-width: 600px; }
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-blue);
+            padding-left: 20px;
+        }
+        .hero-content p { font-size: 1.1rem; line-height: 1.6; color: #ddd; padding-left: 25px; }
+
+        /* Key Metrics */
+        .metrics-bar {
+            background: var(--white);
+            padding: 40px 10%;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+        .metric { text-align: center; }
+        .metric i { font-size: 2rem; color: var(--accent-blue); margin-bottom: 10px; }
+        .metric h4 { font-size: 1.5rem; color: var(--primary-navy); }
+        .metric span { font-size: 0.85rem; color: #777; text-transform: uppercase; }
+
+        /* Why Choose Us - Tabs Style */
+        .features-section { padding: 60px 10%; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-size: 2.2rem; color: var(--primary-navy); }
+        
+        .feature-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 50px;
+        }
+        .feature-row:nth-child(even) { flex-direction: row-reverse; } /* Alternating layout */
+        
+        .feature-text { flex: 1; }
+        .feature-text h3 { font-size: 1.5rem; color: var(--accent-blue); margin-bottom: 15px; }
+        .feature-text p { color: #555; margin-bottom: 20px; }
+        .feature-list { list-style: none; }
+        .feature-list li { margin-bottom: 10px; display: flex; align-items: center; }
+        .feature-list li i { color: var(--accent-blue); margin-right: 10px; }
+
+        .feature-img { flex: 1; }
+        /* Ensuring images fit perfectly */
+        .feature-img img { width: 100%; height: 350px; object-fit: cover; border-radius: 5px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        /* CTA Banner */
+        .cta-banner {
+            background-color: var(--accent-blue);
+            padding: 60px 10%;
+            text-align: center;
+            color: white;
+        }
+        .cta-banner h2 { font-size: 2rem; margin-bottom: 20px; }
+        .cta-btn {
+            background: white;
+            color: var(--accent-blue);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .cta-btn:hover { background: var(--primary-navy); color: white; }
+
+        /* Footer */
+        footer { background: #222; color: #888; padding: 20px; text-align: center; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+            .metrics-bar { flex-direction: column; gap: 30px; }
+            .feature-row { flex-direction: column; }
+            .feature-row:nth-child(even) { flex-direction: column; }
+            .feature-img img { height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">HIG COMPANIES</a>
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Main Hub</a>
+    </nav>
+
+    <section class="mgmt-hero">
+        <div class="hero-content">
+            <h1>Operational Excellence & Compliance</h1>
+            <p>We provide comprehensive property management services for government organizations, housing authorities, and third-party owners.</p>
+        </div>
+    </section>
+
+    <section class="metrics-bar">
+        <div class="metric">
+            <i class="fas fa-building"></i>
+            <h4>5,000+</h4>
+            <span>Units Managed</span>
+        </div>
+        <div class="metric">
+            <i class="fas fa-check-circle"></i>
+            <h4>98%</h4>
+            <span>Occupancy Rate</span>
+        </div>
+        <div class="metric">
+            <i class="fas fa-users"></i>
+            <h4>24/7</h4>
+            <span>Tenant Support</span>
+        </div>
+        <div class="metric">
+            <i class="fas fa-file-contract"></i>
+            <h4>100%</h4>
+            <span>Audit Compliance</span>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="section-header">
+            <h2>Management Solutions</h2>
+            <p>Professional oversight tailored to your asset's needs.</p>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <h3>Financial Integrity</h3>
+                <p>Our accounting team ensures transparent financial reporting and rigorous budget management to maximize your Net Operating Income (NOI).</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Real-time Financial Reporting</li>
+                    <li><i class="fas fa-check"></i> Rent Collection & Arrears Mgmt</li>
+                    <li><i class="fas fa-check"></i> Operating Expense Control</li>
+                </ul>
+            </div>
+            <div class="feature-img">
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Financial Management">
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="feature-text">
+                <h3>Maintenance & Compliance</h3>
+                <p>We prioritize asset preservation through proactive maintenance and strict adherence to all local, state, and federal housing regulations.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Preventative Maintenance Plans</li>
+                    <li><i class="fas fa-check"></i> REAC / Inspection Readiness</li>
+                    <li><i class="fas fa-check"></i> 24/7 Emergency Response</li>
+                </ul>
+            </div>
+            <div class="feature-img">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Maintenance and Compliance Team">
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <h2>Maximize Your Asset's Potential</h2>
+        <p>Partner with a management team that cares about your property as much as you do.</p>
+        <a href="#" class="cta-btn">Request a Proposal</a>
+    </section>
+
+    <footer>
+        &copy; 2026 HIG Property Management. A Division of HIG Companies.
+    </footer>
+
+</body>
+</html>

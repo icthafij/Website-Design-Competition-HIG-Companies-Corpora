@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIG Affordable Housing - Building Communities</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Shared Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+        :root {
+            --primary-navy: #0A192F;
+            --accent-teal: #2A9D8F; /* Main Focus Color for Housing */
+            --light-teal: #e0f2f1;
+            --text-dark: #333333;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--text-dark); background-color: #fff; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+
+        /* Navigation */
+        nav {
+            background: var(--primary-navy);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo { color: var(--white); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+        .back-link { color: var(--accent-teal); text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Hero Section - Community Focused */
+        .housing-hero {
+            height: 65vh;
+            /* Image of a nice apartment complex */
+            background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.6)), url('https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-teal); /* Teal Accent */
+        }
+        .hero-content p { font-size: 1.3rem; max-width: 750px; margin: 0 auto; line-height: 1.8; }
+
+        /* Impact Stats */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 10%;
+            background-color: #f4f8f9;
+            border-bottom: 4px solid var(--accent-teal);
+        }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--accent-teal); display: block; }
+        .stat-label { font-size: 0.9rem; text-transform: uppercase; color: #555; font-weight: 600; }
+
+        /* Mission Section */
+        .mission { padding: 80px 10%; display: flex; align-items: center; gap: 50px; }
+        .mission-text { flex: 1; }
+        .mission-text h2 { font-size: 2.2rem; color: var(--primary-navy); margin-bottom: 20px; }
+        .mission-text p { margin-bottom: 20px; color: #666; }
+        .mission-img { flex: 1; }
+        .mission-img img { width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        /* Services Grid */
+        .services { padding: 80px 10%; background-color: var(--white); }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--primary-navy); }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            padding: 30px;
+            background: #fff;
+            border-left: 5px solid var(--accent-teal);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.3rem; color: var(--primary-navy); }
+        .service-card p { font-size: 0.95rem; color: #666; }
+
+        /* Project Gallery - FIXED IMAGES */
+        .gallery-section { padding: 60px 5%; background: var(--primary-navy); color: white; text-align: center; }
+        .gallery-section h2 { margin-bottom: 40px; color: var(--white); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        
+        .gallery-item {
+            height: 200px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        .gallery-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            opacity: 0.8; 
+            transition: 0.3s; 
+        }
+        .gallery-item img:hover { opacity: 1; transform: scale(1.05); }
+
+        /* Footer */
+        footer { background: #050e1b; color: #aaa; padding: 20px; text-align: center; font-size: 0.8rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mission { flex-direction: column; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .stats { flex-direction: column; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">HIG COMPANIES</a>
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Main Hub</a>
+    </nav>
+
+    <section class="housing-hero">
+        <div class="hero-content">
+            <h1>Building Sustainable Communities</h1>
+            <p>Partnering with government agencies and housing authorities to create quality, affordable living solutions for families across the nation.</p>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-item">
+            <span class="stat-number">12,000+</span>
+            <span class="stat-label">Units Developed</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">LIHTC Compliance</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">40+</span>
+            <span class="stat-label">Civic Partners</span>
+        </div>
+    </section>
+
+    <section class="mission">
+        <div class="mission-text">
+            <h2>Our Commitment to Public Partnership</h2>
+            <p>We understand the unique requirements of government-funded projects. Our team specializes in Low-Income Housing Tax Credit (LIHTC) programs and regulatory compliance.</p>
+            <p>From initial planning to final occupancy, we ensure every project meets the highest standards of safety, sustainability, and community value.</p>
+        </div>
+        <div class="mission-img">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Community Building">
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="section-title">
+            <h2>Core Competencies</h2>
+        </div>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Government Partnerships</h3>
+                <p>Trusted collaboration with housing authorities and municipalities to meet regional housing goals.</p>
+            </div>
+            <div class="service-card">
+                <h3>LIHTC Development</h3>
+                <p>Expertise in tax credit financing structures and long-term compliance monitoring.</p>
+            </div>
+            <div class="service-card">
+                <h3>Sustainable Design</h3>
+                <p>Eco-friendly construction practices that reduce utility costs for residents and operators.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h2>Recent Community Projects</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Project 1"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Project 2"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Project 3"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Project 4"></div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 HIG Affordable Housing. A Division of HIG Companies.
+    </footer>
+
+</body>
+</html>
